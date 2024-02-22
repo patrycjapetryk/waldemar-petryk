@@ -13,7 +13,7 @@ function SignUpForm({ settings }) {
   return (
     <div className='px-4'>
       <div className='grid w-full max-w-xl grid-cols-1 gap-6'>
-        <div className='text-center font-serif tracking-tight text-slate-500'>
+        <div className='text-center font-serif tracking-tight text-neutral-500'>
           <PrismicRichText
             field={socialmediaDescription}
             components={{
@@ -48,7 +48,7 @@ export function Footer({ settings }) {
       <div className='grid grid-cols-1 justify-items-center gap-24'>
         <HorizontalDivider />
         <SignUpForm settings={settings} />
-        <div className='mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500'>
+        <div className='mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-neutral-500'>
           @ {new Date().getFullYear()} Copyrights Waldemar Petryk
         </div>
       </div>

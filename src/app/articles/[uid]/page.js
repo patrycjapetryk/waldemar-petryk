@@ -21,12 +21,12 @@ function LatestArticle({ article }) {
 
   return (
     <li>
-      <h1 className='mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl'>
+      <h1 className='mb-3 text-3xl font-semibold tracking-tighter text-neutral-800 md:text-4xl'>
         <PrismicNextLink document={article}>
           <PrismicText field={article.data.title} />
         </PrismicNextLink>
       </h1>
-      <p className='font-serif italic tracking-tighter text-slate-500'>
+      <p className='font-serif italic tracking-tighter text-neutral-500'>
         {dateFormatter.format(date)}
       </p>
     </li>
@@ -76,16 +76,16 @@ export default async function Page({ params }) {
       settings={settings}
     >
       <Bounded>
-        <Link href='/' className='font-semibold tracking-tight text-slate-400'>
+        <Link href='/' className='font-semibold tracking-tight text-neutral-400'>
           &larr; Powrót
         </Link>
       </Bounded>
       <article>
         <Bounded className='pb-0'>
-          <h1 className='mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl'>
+          <h1 className='mb-3 text-3xl font-semibold tracking-tighter text-neutral-800 md:text-4xl'>
             <PrismicText field={article.data.title} />
           </h1>
-          <p className='font-serif italic tracking-tighter text-slate-500'>
+          <p className='font-serif italic tracking-tighter text-neutral-500'>
             {dateFormatter.format(date)}
           </p>
         </Bounded>

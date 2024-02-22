@@ -1,21 +1,15 @@
-import { Bounded } from "@/components/Bounded";
+import { Bounded } from '@/components/Bounded';
 
 const Field = ({ label, children }) => {
   return (
     <label>
-      <span className="text-sm text-slate-500">{label}</span>
+      <span className='text-sm text-neutral-500'>{label}</span>
       {children}
     </label>
   );
 };
 
-const InputField = ({
-  label,
-  name,
-  type = "text",
-  placeholder,
-  required = true,
-}) => {
+const InputField = ({ label, name, type = 'text', placeholder, required = true }) => {
   return (
     <Field label={label}>
       <input
@@ -23,7 +17,7 @@ const InputField = ({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded-none border-b border-slate-200 py-3 pl-3 pr-7 text-slate-800 placeholder-slate-400"
+        className='w-full rounded-none border-b border-slate-200 py-3 pl-3 pr-7 text-neutral-800 placeholder-slate-400'
       />
     </Field>
   );
@@ -36,7 +30,7 @@ const TextareaField = ({ label, name, placeholder, required = true }) => {
         name={name}
         required={required}
         placeholder={placeholder}
-        className="h-40 w-full rounded-none border-b border-slate-200 py-3 pl-3 pr-7 text-slate-800 placeholder-slate-400"
+        className='h-40 w-full rounded-none border-b border-slate-200 py-3 pl-3 pr-7 text-neutral-800 placeholder-slate-400'
       />
     </Field>
   );
@@ -44,30 +38,19 @@ const TextareaField = ({ label, name, placeholder, required = true }) => {
 
 const ContactForm = () => {
   return (
-    <Bounded as="section" size="small">
-      <form
-        action="/api/contact"
-        method="post"
-        className="grid grid-cols-1 gap-6"
-      >
-        <InputField label="Name" name="name" placeholder="Jane Doe" />
+    <Bounded as='section' size='small'>
+      <form action='/api/contact' method='post' className='grid grid-cols-1 gap-6'>
+        <InputField label='Name' name='name' placeholder='Jane Doe' />
         <InputField
-          label="Email Address"
-          name="email"
-          type="email"
-          placeholder="jane.doe@example.com"
+          label='Email Address'
+          name='email'
+          type='email'
+          placeholder='jane.doe@example.com'
         />
-        <TextareaField
-          label="Message"
-          name="message"
-          placeholder="Write your message here…"
-        />
-        <button
-          type="submit"
-          className="ml-auto inline-flex items-center gap-2"
-        >
-          Send message{" "}
-          <span aria-hidden={true} className="text-xl">
+        <TextareaField label='Message' name='message' placeholder='Write your message here…' />
+        <button type='submit' className='ml-auto inline-flex items-center gap-2'>
+          Send message{' '}
+          <span aria-hidden={true} className='text-xl'>
             &rarr;
           </span>
         </button>
