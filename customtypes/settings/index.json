@@ -28,26 +28,45 @@
         "type": "Image",
         "config": {
           "label": "Profile Picture",
-          "constraint": { "width": 2000, "height": 2000 },
+          "constraint": {
+            "width": 2000,
+            "height": 2000
+          },
           "thumbnails": []
         }
       },
-      "newsletterDescription": {
+      "socialmediaDescription": {
         "type": "StructuredText",
         "config": {
-          "label": "Newsletter Description",
+          "label": "Socialmedia Description",
           "placeholder": "Text above the sign up form",
           "allowTargetBlank": true,
-          "multi": "heading1,paragraph,strong,em,hyperlink,list-item,o-list-item"
+          "multi": "paragraph,heading1,strong,em,hyperlink,list-item,o-list-item"
         }
       },
-      "newsletterDisclaimer": {
-        "type": "StructuredText",
+      "socialmedia": {
+        "type": "Group",
         "config": {
-          "label": "Newsletter Disclaimer",
-          "placeholder": "Small text below sign up form",
-          "allowTargetBlank": true,
-          "multi": "paragraph,em,strong,hyperlink"
+          "label": "Socialmedia",
+          "repeat": true,
+          "fields": {
+            "icon": {
+              "type": "Image",
+              "config": {
+                "label": "Icon",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
         }
       }
     }

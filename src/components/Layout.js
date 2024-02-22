@@ -1,5 +1,5 @@
-import { Header } from "./Header";
-import { Footer } from "./Footer";
+import { Header } from './Header';
+import { Footer } from './Footer';
 
 export function Layout({
   navigation,
@@ -10,7 +10,7 @@ export function Layout({
   children,
 }) {
   return (
-    <div className="text-slate-700">
+    <div className='text-slate-700'>
       <Header
         withProfile={withProfile}
         withDivider={withHeaderDivider}
