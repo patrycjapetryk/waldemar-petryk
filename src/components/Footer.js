@@ -8,7 +8,7 @@ import { PrismicImage } from '@prismicio/react';
 
 function SignUpForm({ settings }) {
   const { socialmediaDescription, socialmedia } = settings.data;
-  console.log(socialmedia);
+  // console.log(socialmedia);
 
   return (
     <div className='px-4'>
